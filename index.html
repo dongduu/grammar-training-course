@@ -7,21 +7,16 @@
 </head>
 <body>
   <script>
-    const arr = ['B-332', 'C-154', 'B-509', 'A-412', 'A-788', 'C-012', 'A-649', 'C-099', 'B-144']
-    
-    const 보경님 = [];
-    const 동주님 = [];
-    const 현우님 = [];
+  const arr = ['hi', 'dongju', 'one', 'for', 'project']
 
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].slice([0],[1]) === 'A') {
-        console.log('보경님');
-    } else if (arr[i].slice([0],[1]) === 'B') {
-        console.log('동주님');
-    } else {
-        console.log('현우님');
-      }
+  let maxLength = []
+  
+  for (let i in arr) {
+  if(arr[i].length > maxLength.length) {
+    maxLength = arr[i];
     }
+  }
+  console.log(maxLength);
   </script>
 </body>
 </html>
