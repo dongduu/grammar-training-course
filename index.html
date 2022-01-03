@@ -1,0 +1,27 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const arr = ['B-332', 'C-154', 'B-509', 'A-412', 'A-788', 'C-012', 'A-649', 'C-099', 'B-144']
+    
+    const 보경님 = [];
+    const 동주님 = [];
+    const 현우님 = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].slice([0],[1]) === 'A') {
+        console.log('보경님');
+    } else if (arr[i].slice([0],[1]) === 'B') {
+        console.log('동주님');
+    } else {
+        console.log('현우님');
+      }
+    }
+  </script>
+</body>
+</html>
