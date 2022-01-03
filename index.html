@@ -7,16 +7,29 @@
 </head>
 <body>
   <script>
-  const arr = ['hi', 'dongju', 'one', 'for', 'project']
-
-  let maxLength = []
+  let word = '';
+  let answer = '';
   
-  for (let i in arr) {
-  if(arr[i].length > maxLength.length) {
-    maxLength = arr[i];
+  let test = {
+    1: [word, answer],
+    2: [word, answer],
+    3: [word, answer],
+    4: [word, answer],
+    5: [word, answer],
+  }
+
+  for (i = 1; i < 6; i++) {
+    test[i][0] = prompt('단어를 입력해주세요');
+    test[i][1] = prompt('뜻을 입력해주세요');
+  }
+
+  for (let i in test) {
+    if(prompt(`문제 ${i}! ${test[i][0]}의 뜻을 맞추시오!`) === test[i][1]) {
+      alert('정답입니다!');
+    } else {
+      alert('틀렷습니다!');
     }
   }
-  console.log(maxLength);
   </script>
 </body>
 </html>
