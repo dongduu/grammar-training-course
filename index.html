@@ -1,35 +1,23 @@
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-  let word = '';
-  let answer = '';
-  
-  let test = {
-    1: [word, answer],
-    2: [word, answer],
-    3: [word, answer],
-    4: [word, answer],
-    5: [word, answer],
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [10, 20, 30];
 
-  for (i = 1; i < 6; i++) {
-    test[i][0] = prompt('단어를 입력해주세요');
-    test[i][1] = prompt('뜻을 입력해주세요');
-  }
+      // for of()
+      for (let a of arr) {
+        console.log(a);
+      }
 
-  for (let i in test) {
-    if(prompt(`문제 ${i}! ${test[i][0]}의 뜻을 맞추시오!`) === test[i][1]) {
-      alert('정답입니다!');
-    } else {
-      alert('틀렷습니다!');
-    }
-  }
-  </script>
-</body>
+      // forEach()
+      arr.forEach(function (a, i, array) {
+        console.log(a, i, array);
+      });
+    </script>
+  </body>
 </html>
