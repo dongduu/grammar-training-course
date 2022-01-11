@@ -7,17 +7,36 @@
   </head>
   <body>
     <script>
-      const arr = [10, 20, 30];
+      let angleArr = [];
+      let sumAngle = 0;
 
-      // for of()
-      for (let a of arr) {
-        console.log(a);
+      for (let i = 0; i < 4; i++) {
+        angleArr.push(
+          Number(prompt(`사각형의 ${i + 1}번째 각도를 입력해주세요!`))
+        );
+      }
+      console.log(angleArr);
+
+      for (let a of angleArr) {
+        sumAngle = Number(sumAngle + a);
       }
 
-      // forEach()
-      arr.forEach(function (a, i, array) {
-        console.log(a, i, array);
-      });
+      if (sumAngle > 360 || sumAngle < 360) {
+        alert("사각형이 아닙니다!");
+      } else if (checkRectangle()) {
+        alert("직사각형입니다!");
+      } else {
+        alert("사각형입니다!");
+      }
+
+      function checkRectangle() {
+        for (let a of angleArr) {
+          if (a != 90) {
+            return false;
+          }
+        }
+        return true;
+      }
     </script>
   </body>
 </html>
