@@ -7,36 +7,27 @@
   </head>
   <body>
     <script>
-      let angleArr = [];
-      let sumAngle = 0;
+      const personK = {
+        currentAmount: 13000,
+        storage: 2200,
+      };
+      const personL = {
+        currentAmount: 26000,
+        storage: 5950,
+      };
+      const personC = {
+        currentAmount: 7500,
+        storage: 0,
+      };
 
-      for (let i = 0; i < 4; i++) {
-        angleArr.push(
-          Number(prompt(`사각형의 ${i + 1}번째 각도를 입력해주세요!`))
+      const members = [personK, personL, personC];
+
+      members.forEach(function (a, i) {
+        a.storage += a.currentAmount * 0.05;
+        console.log(
+          `${i + 1}번째 회원님의 현재 보유 포인트는 ${a.storage}입니다!`
         );
-      }
-      console.log(angleArr);
-
-      for (let a of angleArr) {
-        sumAngle = Number(sumAngle + a);
-      }
-
-      if (sumAngle > 360 || sumAngle < 360) {
-        alert("사각형이 아닙니다!");
-      } else if (checkRectangle()) {
-        alert("직사각형입니다!");
-      } else {
-        alert("사각형입니다!");
-      }
-
-      function checkRectangle() {
-        for (let a of angleArr) {
-          if (a != 90) {
-            return false;
-          }
-        }
-        return true;
-      }
+      });
     </script>
   </body>
 </html>
