@@ -7,53 +7,24 @@
   </head>
   <body>
     <script>
-      const goals = [
-        "프론트엔드 개발자로 취업하기",
-        "5kg 감량하기",
-        "100일 동안 5시에 일어나기",
-        "대청소하기",
-        "개발자 교육 수료하기",
-      ];
-      const rewards = [
-        ["아이패드", 990000],
-        ["무드등", 59900],
-        ["장편 소설 시리즈", 159000],
-        ["가족들에게 아웃백 쏘기", 300000],
-        ["몽골 여행", 1300000],
-      ];
+      let arr = [];
 
-      let goalsRanking = [];
-      let rewardsRanking = [];
+      let i = 0;
+      while (i < 5) {
+        arr.push(Number(prompt("숫자를 입력해주세요!")));
+        i++;
+      }
 
-      // 우선순위를 받아서 목표리스트 만들기
-      for (let a of goals) {
-        let answer = Number(prompt(`${a}의 우선순위를 입력해주세요!`));
-
-        switch (answer) {
-          case 1:
-            goalsRanking[0] = a;
-          case 2:
-            goalsRanking[1] = a;
-          case 3:
-            goalsRanking[2] = a;
-          case 4:
-            goalsRanking[3] = a;
-          case 5:
-            goalsRanking[4] = a;
+      let maxNum = 0;
+      let a = 0;
+      while (a < arr.length) {
+        if (arr[a] > maxNum) {
+          maxNum = arr[a];
         }
+        a++;
       }
 
-      // 보상리스트 높은 가격 순위로 정렬
-      for (let i = 0; i < rewards.length; i++) {
-        rewardsRanking.push([rewards[i][1], rewards[i][0]]);
-      }
-      rewardsRanking.sort((a, b) => b - a);
-      console.log(rewardsRanking);
-
-      // 결과 출력
-      goalsRanking.forEach((a, i) => {
-        console.log(`목표 ${i + 1}: ${a}, 보상: ${rewardsRanking[i][1]}`);
-      });
+      alert(`가장 큰 숫자는 ${maxNum}입니다!`);
     </script>
   </body>
 </html>
