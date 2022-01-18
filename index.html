@@ -8,23 +8,17 @@
   <body>
     <script>
       let arr = [];
+      arr.push(Number(prompt("숫자를 입력해주세요!")));
 
-      let i = 0;
-      while (i < 5) {
-        arr.push(Number(prompt("숫자를 입력해주세요!")));
-        i++;
-      }
-
-      let maxNum = 0;
-      let a = 0;
-      while (a < arr.length) {
-        if (arr[a] > maxNum) {
-          maxNum = arr[a];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 10 === 0) {
+          alert("10의 배수입니다!");
+        } else if (arr[i] % 2 === 0) {
+          alert("짝수입니다!");
+        } else {
+          alert("홀수입니다!");
         }
-        a++;
       }
-
-      alert(`가장 큰 숫자는 ${maxNum}입니다!`);
     </script>
   </body>
 </html>
