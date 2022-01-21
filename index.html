@@ -7,16 +7,16 @@
   </head>
   <body>
     <script>
-      let arr = [];
-      arr.push(Number(prompt("숫자를 입력해주세요!")));
+      for (var i = 1; i <= 10; i++) {
+        for (var j = 1; j <= 10; j++) {
+          document.write(i + "," + j, "<br>");
+        }
+      }
 
-      for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 10 === 0) {
-          alert("10의 배수입니다!");
-        } else if (arr[i] % 2 === 0) {
-          alert("짝수입니다!");
-        } else {
-          alert("홀수입니다!");
+      for (var i = 1; i <= 10; i++) {
+        console.log(i);
+        if (i === 5) {
+          break;
         }
       }
     </script>
