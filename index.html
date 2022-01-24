@@ -7,16 +7,9 @@
   </head>
   <body>
     <script>
-      for (var i = 1; i <= 10; i++) {
-        for (var j = 1; j <= 10; j++) {
-          document.write(i + "," + j, "<br>");
-        }
-      }
-
-      for (var i = 1; i <= 10; i++) {
-        console.log(i);
-        if (i === 5) {
-          break;
+      for (let i = 1; i < 10; i++) {
+        for (let j = 2; j < 10; j += 2) {
+          console.log(`${i} * ${j} = ${i * j}`);
         }
       }
     </script>
